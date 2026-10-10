@@ -1,6 +1,8 @@
 # Passport Mitra
 
-Hackathon app (5-hour build, team of four). Plan: `docs/implementation.md`. Run, layout and workstreams: `README.md`.
+Hackathon app (5-hour build, team of four). Plan: `docs/implementation.md`. Run and layout: `README.md`.
+
+**Ownership: `TEAM.md`.** Edit only files owned by the lane you're working for. Shared files (the contract, lockfiles) need a heads-up first.
 
 ## Commands
 
@@ -15,7 +17,7 @@ Hackathon app (5-hour build, team of four). Plan: `docs/implementation.md`. Run,
 - All Claude calls go through `app/llm.py` `structured()`. Model IDs come from settings, never hardcoded.
 - One file per graph node in `backend/app/agent/nodes/`. Routing lives only in `agent/graph.py`.
 - Stubs are marked `TODO(agent|cart|frontend|voice)` by owning lane.
-- UI strings go in `frontend/src/i18n/en.json` first; never hardcode user-facing text in components.
+- UI strings go in `frontend/src/i18n/en/<area>.json` first (one area file per lane); never hardcode user-facing text in components.
 - Tests run in mock mode with an empty index (`backend/tests/conftest.py`); keep them offline.
 
 ## Never

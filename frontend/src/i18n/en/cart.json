@@ -1,0 +1,17 @@
+{
+  "cart": {
+    "title": "Check my documents",
+    "onDevice": "Photos are read on this phone and never uploaded.",
+    "addPhoto": "Add photo",
+    "reading": "Reading… {{pct}}%",
+    "whatWeRead": "What we read",
+    "docs": {
+      "aadhaar": "Aadhaar card",
+      "pan": "PAN card",
+      "passport": "Old passport",
+      "marksheet": "Class 10 certificate",
+      "address": "Rent agreement or utility bill",
+      "birth": "Birth certificate"
+    }
+  }
+}
