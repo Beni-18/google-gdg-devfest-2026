@@ -1,0 +1,14 @@
+[
+  {
+    "match": "police verification",
+    "meaning": "Your file is with the local police for an address and background check.",
+    "next": "Be reachable at your address and keep address proof ready. If it exceeds the stated time, use the grievance option on Passport Seva.",
+    "source": "plan section 4.3 (unverified wording)"
+  },
+  {
+    "match": "file closure",
+    "meaning": "The passport office closed your file because of a problem it described in the notice.",
+    "next": "Read the stated reason, then use 'I'm stuck' with the reason text.",
+    "source": "plan section 4.3 (unverified wording)"
+  }
+]

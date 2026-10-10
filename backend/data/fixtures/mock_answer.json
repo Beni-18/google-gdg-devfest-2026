@@ -1,0 +1,49 @@
+{
+  "diagnosis": "[MOCK] Your documents show two different versions of your name, so the passport office cannot confirm they belong to the same person.",
+  "likely_causes": [
+    "The name on your Class 10 certificate differs from the name on your Aadhaar."
+  ],
+  "recommended_path": {
+    "name": "Prove both names belong to you",
+    "steps": [
+      "Ask your Passport Seva Kendra which affidavit they accept for a name difference.",
+      "Prepare that affidavit stating both versions of your name.",
+      "Resubmit with a short covering letter that refers to your file."
+    ],
+    "documents_needed": ["Aadhaar", "Class 10 certificate", "Affidavit stating both names"],
+    "where": "PSK"
+  },
+  "alternatives": [
+    {
+      "name": "Notarised affidavit plus a newspaper notice",
+      "when_it_applies": "If your passport office asks for public notice of the name difference."
+    }
+  ],
+  "conflicts": [
+    {
+      "issue": "Sources disagree on whether the affidavit must be attested by an executive magistrate or a notary.",
+      "what_decides_it": "Your passport office's practice. Ask before you prepare the affidavit."
+    }
+  ],
+  "similar_cases": [
+    {
+      "summary": "A file was closed over a name difference between Aadhaar and a school certificate.",
+      "outcome": "Unknown",
+      "citation_id": "c-name-disc-001",
+      "date": null
+    }
+  ],
+  "citations": [
+    {
+      "source_id": "c-name-disc-001",
+      "title": "Kaanoon: file closure notification letter received from RPO Chandigarh",
+      "url": "https://www.kaanoon.com/478092/file-closure-notification-letter-received-from-rpo-chandigarh",
+      "source_type": "lawyer_qa",
+      "date": null
+    }
+  ],
+  "confidence": "medium",
+  "unknowns": ["Which attestation route your passport office accepts."],
+  "escalation": ["Passport Seva grievance", "CPGRAMS (pgportal.gov.in)", "RTI"],
+  "disclaimer": "Guidance only, not legal advice. Confirm with the Passport Office."
+}

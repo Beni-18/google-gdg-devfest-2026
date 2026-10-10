@@ -1,0 +1,21 @@
+@import 'tailwindcss';
+
+@theme {
+  --font-sans: 'Noto Sans', 'Noto Sans Devanagari', 'Noto Sans Tamil', 'Noto Sans Bengali', system-ui, sans-serif;
+  --color-brand: #1e3a8a;
+  --color-brand-soft: #dbeafe;
+  --color-accent: #f59e0b;
+}
+
+/* Large text by default: hesitant and first-time users (plan section 5). */
+html {
+  font-size: 18px;
+}
+
+body {
+  @apply bg-slate-50 text-slate-900 antialiased;
+}
+
+:focus-visible {
+  @apply outline-3 outline-offset-2 outline-amber-500;
+}
