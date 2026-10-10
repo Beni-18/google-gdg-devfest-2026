@@ -1,0 +1,14 @@
+{
+  "_comment": "Copy to cases/<id>.json (one card, or a list of cards). Files starting with '_' are not ingested. Summaries in your own words; never paste the post.",
+  "id": "c-<category>-001",
+  "category": "name_discrepancy | name_change_marriage | dob_mismatch | no_birth_certificate | address_mismatch | adverse_pv | pv_delay | minor_consent | lost_passport | refund_reschedule | single_name | other",
+  "service": "fresh | reissue | minor | lost_damaged | tatkaal | pcc | evisa",
+  "situation": "One or two sentences: what went wrong, at which stage.",
+  "remedies_reported": [
+    {"name": "What people say fixed it", "outcome": "worked | failed | unknown"}
+  ],
+  "conflict_note": "Optional: where sources disagree.",
+  "source": {"title": "Site + thread title", "url": "https://...", "type": "official | court | parliament | lawyer_qa | forum | blog | user", "date": "YYYY-MM or unknown"},
+  "reliability": 3,
+  "your_summary": "In your own words, not copied."
+}

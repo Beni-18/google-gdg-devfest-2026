@@ -1,0 +1,8 @@
+{
+  "_note": "Illustrative entries from plan section 3.6. Every hi/ta/mr/bn value needs native-speaker review before the demo.",
+  "police verification": {"hi": "पुलिस सत्यापन", "ta": "காவல்துறை சரிபார்ப்பு", "keep_english": true},
+  "Passport Seva Kendra": {"keep_english": true, "abbr": "PSK"},
+  "affidavit": {"hi": "शपथ पत्र", "ta": "உறுதிமொழிப் பத்திரம்"},
+  "Annexure": {"keep_english": true},
+  "ARN": {"keep_english": true}
+}

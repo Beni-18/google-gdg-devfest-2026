@@ -1,0 +1,27 @@
+{
+  "_note": "M6 deterministic e-Visa pre-check inputs (plan section 4.2). Sources: Indian mission pages; windows differ across pages and years.",
+  "passport_validity_months_from_arrival": 6,
+  "min_blank_pages": 2,
+  "apply_min_days_before_arrival": 4,
+  "apply_max_days_before_arrival": 120,
+  "apply_max_days_conflict": "Sources say 30, 60, 120 or 180 days. Default 120 and tell the user to confirm on indianvisaonline.gov.in.",
+  "fee_min_days_before_travel": 4,
+  "max_evisas_per_calendar_year": 2,
+  "ineligible": [
+    "Diplomatic or official passport holders",
+    "Travel document holders",
+    "People endorsed on another person's passport",
+    "People of Pakistani origin (must apply for a regular visa at a mission)"
+  ],
+  "on_arrival": [
+    "Biometrics are captured at immigration",
+    "Carry a Yellow Fever card if arriving from an affected country",
+    "Travel on the passport used in the application; carry the old one if the visa was granted on it"
+  ],
+  "sources": [
+    "https://eoilisbon.gov.in/pages/NQ,,",
+    "https://cgitoronto.gov.in/page/e-visa",
+    "https://eoibratislava.gov.in/e-visa",
+    "https://www.cgivladi.gov.in/page/advisory-for-e-visa-applicants"
+  ]
+}

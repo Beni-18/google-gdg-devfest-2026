@@ -1,0 +1,11 @@
+{
+  "_note": "Plan section 4.2. All figures sourced; MEA figures marked self_reported are MEA's own claims.",
+  "passports_issued_2025": {"value": "1.39 crore", "source": "MEA statement at Passport Seva Divas, 24 June 2026", "url": "https://organiser.org/2026/06/24/359627/bharat/passport-seva-divas-india-issues-1-39-crore-passports-in-2025-as-passport-seva-network-expands-to-545-centres/"},
+  "passport_kendras": {"value": 545, "ten_years_ago": 77, "source": "Same as above"},
+  "applications_fy22_fy26": {"value": 68181433, "source": "Lok Sabha reply reported by ThePrint", "url": "https://theprint.in/india/indians-paid-rs-16767-crore-for-issuance-of-passports-in-last-5-years-govt-tells-parliament/2995732/"},
+  "passports_issued_fy22_fy26": {"value": 65070353, "source": "Same as above"},
+  "applications_rejected_fy22_fy26": {"value": 8794, "share": "about 0.013%", "source": "Same as above"},
+  "typical_issuance": {"value": "about six working days excluding police verification", "self_reported": true, "source": "StratNews coverage of MEA remarks", "url": "https://stratnewsglobal.com/?p=140029"},
+  "avg_psk_processing": {"value": "under 45 minutes", "self_reported": true, "source": "Same as above"},
+  "pv_average_days": {"value": {"2013": 49, "2014": 42, "2015": 34, "2017": 23, "2018": 19, "2019_jan_jun": 18}, "target": 21, "source": "MEA press note; Lok Sabha reply", "url": "https://eparlib.sansad.in/bitstream/123456789/954129/1/AU3958.pdf"}
+}

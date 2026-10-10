@@ -1,0 +1,19 @@
+{
+  "id": "c-name-disc-001",
+  "category": "name_discrepancy",
+  "service": "reissue",
+  "situation": "Name on Aadhaar differs from the name on the Class 10 certificate; the applicant received a file-closure notice from RPO Chandigarh.",
+  "remedies_reported": [
+    {"name": "Same-person affidavit attested by an executive magistrate", "outcome": "unknown"},
+    {"name": "Notarised name affidavit plus a newspaper notice, resubmitted with a covering letter", "outcome": "unknown"}
+  ],
+  "conflict_note": "Sources disagree on the attestation route (executive magistrate vs notary plus newspaper notice).",
+  "source": {
+    "title": "Kaanoon: file closure notification letter received from RPO Chandigarh",
+    "url": "https://www.kaanoon.com/478092/file-closure-notification-letter-received-from-rpo-chandigarh",
+    "type": "lawyer_qa",
+    "date": "unknown"
+  },
+  "reliability": 3,
+  "your_summary": "An applicant's file was closed because two identity documents showed different names. Lawyers answering suggested two different ways to prove both names belong to one person, and they did not agree on which attestation the passport office would accept."
+}
