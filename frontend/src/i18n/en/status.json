@@ -1,0 +1,9 @@
+{
+  "status": {
+    "title": "What does my status mean?",
+    "placeholder": "Paste your status message here",
+    "explain": "Explain",
+    "meaning": "What it means",
+    "next": "What to do next"
+  }
+}

@@ -62,6 +62,7 @@ CI runs the same checks on every PR.
 │  │  ├─ pii.py                  Redacts Aadhaar/PAN/passport/phone/email from user text
 │  │  ├─ speech.py               Sarvam STT, TTS, translate
 │  │  ├─ glossary.py, status.py  Locked translations; status decoder
+│  │  ├─ translation.py          localize_answer(): the agent's only link to translation
 │  │  ├─ agent/
 │  │  │  ├─ graph.py             LangGraph wiring and routing rules
 │  │  │  ├─ state.py             CaseState
@@ -78,8 +79,8 @@ CI runs the same checks on every PR.
 │  └─ tests/
 ├─ frontend/                     Vite, React 19, TypeScript, Tailwind 4, i18next, PWA
 │  └─ src/
-│     ├─ lib/                    api.ts (typed client), types.ts ★, sse.ts, speech.ts, langs.ts
-│     ├─ i18n/{en,hi,ta,mr,bn}.json
+│     ├─ lib/                    api.ts (typed client), types.ts ★, sse.ts, speech.ts, langs.ts, reference.ts
+│     ├─ i18n/<lang>/{app,cart,stuck,status}.json   one file per area, so lanes never collide
 │     ├─ store/                  App state (zustand) and the assisted-mode reset registry
 │     ├─ components/             Layout, BigButton, MicButton, ListenButton, ConfidenceBadge
 │     └─ features/
@@ -141,28 +142,26 @@ SSE events: `progress {node}` once per finished node, then exactly one of `clari
 
 ## Workstreams (team of four)
 
-The code is split so each lane mostly touches its own folders. Search for the lane's tag (for example `TODO(cart)`) to find every stub.
+**[TEAM.md](TEAM.md) is the source of truth:** who owns which files, task lists, the interfaces between lanes, the timeline and the Git workflow. Edit only your lane's files.
 
-| Lane | Owns | Tag | First "done when" (plan 7.2) |
-|---|---|---|---|
-| **1. Agent** | `backend/app/agent/`, `llm.py`, `rag.py` scoring | `TODO(agent)` | A typed problem returns a cited answer with a real confidence score |
-| **2. Document Cart** | `frontend/src/features/cart/` | `TODO(cart)` | OCR → extract → confirm/edit → checks → "Not ready / Almost / Ready" card with "Fix with Mitra" |
-| **3. Frontend & UX** | `frontend/src/{components,features/stuck,status,assisted,home,onboarding}` | `TODO(frontend)` | Journeys A and B work end to end; status timeline; printable assisted summary |
-| **4. Data, voice & eval** | `backend/data/`, `speech.py`, `glossary.py`, `localize` node, `i18n/*.json` | `TODO(voice)` | 6–8 rule files + 15 case cards ingested, glossary reviewed, hi/ta strings translated, eval run |
-
-Contract changes (`schemas.py` ↔ `types.ts`) need a heads-up to the whole team.
+| Lane | Tag in code |
+|---|---|
+| A. Agent & API | `TODO(agent)` |
+| B. Document Cart | `TODO(cart)` |
+| C. App & UI | `TODO(frontend)` |
+| D. Knowledge, language & eval | `TODO(voice)` |
 
 ### What already works and what's stubbed
 
 | Area | Working now | Stubbed (owner) |
 |---|---|---|
-| API | All endpoints, SSE streaming, consent check, PII scrub, input caps, CORS | Rate limiting (agent) |
-| Agent | Graph wiring, clarify interrupt + resume, mock mode. Triage (Haiku) and synthesize (Sonnet) are wired with structured output; request building is verified, but they have not run with a real key yet | First live run with a key, verify, action_draft, guardrail checks, localize, live_search, real confidence (agent, voice) |
-| Retrieval | Ingest with validation, multilingual embeddings, Chroma search, `make query` | Re-weighting, filters, dedupe (agent) |
-| Speech | Sarvam STT/TTS/translate wrappers, browser fallbacks, mic and listen buttons | Live Sarvam test with a key (voice) |
-| Cart | Photo → on-device OCR (lazy language data) → Aadhaar masked → raw text | Preprocessing, classify, extract, confirm/edit screen, checks, result card (cart) |
-| UI | Language + consent, home, chat with progress and clarify, answer card, status decoder, assisted counter + clear-all, PWA | Translations, journey timeline, PV chip, share as image (frontend, voice) |
-| Data | 1 rule file (e-Visa), 1 case card, glossary seed, 2 status patterns, 2 unsafe eval prompts, all reference figures | The data sprint (voice) |
+| API | All endpoints, SSE streaming, consent check, PII scrub, input caps, CORS | Rate limiting (A) |
+| Agent | Graph wiring, clarify interrupt + resume, mock mode. Triage (Haiku) and synthesize (Sonnet) are wired with structured output; request building is verified, but they have not run with a real key yet | First live run with a key, verify, action_draft, guardrail checks, live_search, real confidence (A); localize_answer (D) |
+| Retrieval | Ingest with validation, multilingual embeddings, Chroma search, `make query` | Re-weighting, filters, dedupe (A) |
+| Speech | Sarvam STT/TTS/translate wrappers, browser fallbacks, mic and listen buttons | Live Sarvam test with a key (D); voice UX on phones (C) |
+| Cart | Photo → on-device OCR (lazy language data) → Aadhaar masked → raw text | Preprocessing, classify, extract, confirm/edit screen, checks, result card (B) |
+| UI | Language + consent, home, chat with progress and clarify, answer card, status decoder, assisted counter + clear-all, PWA | Journey timeline, PV chip, share as image (C); translations (D) |
+| Data | 1 rule file (e-Visa), 1 case card, glossary seed, 2 status patterns, 2 unsafe eval prompts, all reference figures | The data sprint (D) |
 
 ---
 

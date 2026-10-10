@@ -1,22 +1,21 @@
-import i18n from 'i18next'
+import i18n, { type Resource } from 'i18next'
 import { initReactI18next } from 'react-i18next'
 import { useApp } from '../store/app'
-import bn from './bn.json'
-import en from './en.json'
-import hi from './hi.json'
-import mr from './mr.json'
-import ta from './ta.json'
 
-// en.json is the source of truth; missing keys in other languages fall back to English.
-// `npm run i18n:check` lists what still needs translating.
+// One file per area so lanes never edit the same file: <lang>/{app,cart,stuck,status}.json.
+// Each top-level key lives in exactly one area file; files are merged per language here.
+// en is the source of truth; missing keys fall back to English. `npm run i18n:check` lists gaps.
+const files = import.meta.glob<Record<string, unknown>>('./*/*.json', { eager: true, import: 'default' })
+
+const resources: Resource = {}
+for (const [path, strings] of Object.entries(files)) {
+  const lang = path.split('/')[1]
+  resources[lang] ??= { translation: {} }
+  Object.assign(resources[lang].translation, strings)
+}
+
 void i18n.use(initReactI18next).init({
-  resources: {
-    en: { translation: en },
-    hi: { translation: hi },
-    ta: { translation: ta },
-    mr: { translation: mr },
-    bn: { translation: bn },
-  },
+  resources,
   lng: useApp.getState().lang,
   fallbackLng: 'en',
   interpolation: { escapeValue: false }, // React already escapes

@@ -1,0 +1,36 @@
+{
+  "app": {
+    "name": "Passport Mitra",
+    "tagline": "Check before you book. Fix it when you're stuck."
+  },
+  "common": {
+    "back": "Back",
+    "error": "Something went wrong. Please try again.",
+    "offline": "Can't reach the Mitra server. Check your connection.",
+    "mockMode": "Demo mode: answers are sample data.",
+    "speak": "Speak",
+    "stop": "Stop",
+    "listen": "Listen",
+    "listening": "Listening…"
+  },
+  "onboarding": {
+    "chooseLanguage": "Choose your language",
+    "privacyTitle": "Your privacy",
+    "privacyPromise": "Your document photos stay on your phone. We never upload or store them. When you ask for help, only your words are sent, with ID numbers removed.",
+    "agree": "I understand, continue"
+  },
+  "home": {
+    "checkDocs": "Check my documents",
+    "checkDocsHint": "Before you book an appointment",
+    "stuck": "I'm stuck",
+    "stuckHint": "Already applied and facing a problem",
+    "status": "What does my status mean?",
+    "statusHint": "Paste the message you received",
+    "assistedOn": "Assisted mode is on",
+    "assistedOff": "Helping someone else? Turn on assisted mode"
+  },
+  "assisted": {
+    "client": "Client {{n}}",
+    "clearAll": "Clear all, next client"
+  }
+}
